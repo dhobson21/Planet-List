@@ -22,3 +22,22 @@ rocky_planets = planet_list[slice(0,4)]
 #Being good amateur astronomers, we know that Pluto is now a dwarf planet, so use the del operation to remove it from the end of planet_list.
 
 planet_list.remove("Pluto")
+
+#CHALLENGE: ITERATING OVER PLANETS
+
+#Create another list containing tuples. Each tuple will hold the name of a spacecraft that we have launched, and the names of the planet(s) that it has visited, or landed on.
+
+spacecraft = [
+   ("Cassini", "Saturn"),
+   ("Viking", "Mars"),
+   ("Warrior", "Uranus"),
+   ("King", "Saturn")
+]
+
+#Iterate over your list of planets, and inside that loop, iterate over the list of tuples. Print, for each planet, which satellites have visited it.
+
+for planet in planet_list:
+    print(f'{planet}')
+    for planets in spacecraft:
+        if planet is planets[1]:
+            print(f'*   {planets[0]}')
